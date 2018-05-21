@@ -1,0 +1,76 @@
+$home-max-width:$grid;
+$home-font-family:$font-family-first;
+$home-font-color:$color-white-content;
+$home-corporative-font-color:$color-corporative;
+$home-description-font-color:$color-white-opacity-content;
+
+.header{
+  display: none;
+}
+
+.home{
+  background: url('../images/office.jpg') no-repeat;
+  background-size: cover;
+  font-family: $home-font-family;
+  height: 100vh;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.home__back{
+  @include aspect-ratio(2, 1); //fullscreen
+  height: 100vh;
+  z-index: -5;
+}
+
+.home__title{
+  color: $home-font-color;
+  font-size: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.home__green{
+  color: $home-corporative-font-color;
+}
+
+.home__description{
+  color: $home-description-font-color;
+  font-size: 1rem;
+  text-align: justify;
+  padding: 5rem 3rem 0 3rem;
+}
+
+@media #{$breakpoints-medium} {
+    .home__title{
+    font-size: 2rem;
+    padding-top: 15rem;
+  }
+
+  .home__description{
+    font-size: 1.5rem;
+    padding: 5rem 10rem 0 10rem;
+  }
+
+}
+
+@media #{$breakpoints-large} {
+  .home__title{
+    font-size: 2rem;
+    padding-top: 15rem;
+  }
+
+  .home__description{
+    font-size: 1.5rem;
+    padding: 5rem 15rem 0 15rem;
+  }
+
+}
+
+@media #{$breakpoints-xlarge} {
+
+}
+
